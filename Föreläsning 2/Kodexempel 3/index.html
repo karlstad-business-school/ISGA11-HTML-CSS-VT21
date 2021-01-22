@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="sv">
+  <head>
+    <meta charset="utf-8">
+    <title>Kodexempel</title>
+  </head>
+  <body>
+    <h1>Exempel med formulär</h1>
+
+    <form>
+
+      <fieldset>
+        <legend>Välj vad du vill</legend>
+        <div>
+          <label for="color">Välj en färg</label>
+          <select id="color">
+            <option>Röd</option>
+            <option>Grön</option>
+            <option>Blå</option>
+            <option>Beige</option>
+          </select>
+        </div>
+        <div>
+          <input type="number" id="pengar"      
+            placeholder="Ange hur mycket pengar du vill ha" required min="1000" max="2000">
+        </div>
+        <div>
+          <button>Tryck på mig!</button>
+        </div>
+
+      </fieldset>
+    </form>
+
+  </body>
+</html>

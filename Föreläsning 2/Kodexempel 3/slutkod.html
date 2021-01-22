@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="sv">
+  <head>
+    <meta charset="utf-8">
+    <title>Kodexempel</title>
+  </head>
+  <body>
+    <h1>Exempel med formulär</h1>
+
+    <!--
+      Så här skapar vi ett formulär
+    -->
+    <form>
+      <!--
+        Eftersom både <label> och <input> är inline-element stoppar vi dem i en <div> så att inte alla fält hamnar på en lång rad.
+      -->
+      <div>
+        <!--
+          Etikettens värde på `for`-attributet ska matcha fältets id.
+          Av samma anledning som ovan måste vi också lägga till en <br> mellan etiketten och fältet.
+        -->
+        <label for="name">Ditt namn:</label><br>
+        <!--
+          Vi gör ett vanligt textfält (type="text") och markerar det som obligatoriskt.
+        -->
+        <input id="name" type="text" required>
+      </div>
+
+      <div>
+        <label for="email">Din e-postadress:</label><br>
+        <!--
+          Vi kan lägga till en platshållartext som visas när fältet är tomt genom att använda attributet `placeholder`.
+        -->
+        <input id="email" type="email" placeholder="namn@example.com">
+      </div>
+
+      <div>
+        <label for="color">Färg:</label><br>
+        <!--
+          En dropdown-meny skapar vi med <select>. Valen skapar vi med <option>
+        -->
+        <select id="color">
+          <option>Röd</option>
+          <option>Blå</option>
+          <option>Grön</option>
+          <option>Beige</option>
+        </select>
+      </div>
+
+      <div>
+        <label for="amount">Antal:</label><br>
+        <!--
+          <input type="number"> är en fälttyp för att fylla i tal. Vi sätter ett standardvärde med `value` och ett minsta värde med `min`.
+        -->
+        <input id="amount" type="number" min="1" value="1">
+      </div>
+
+      <!--
+        Man kan gruppera fält som hör ihop genom att använda <fieldset>. Fältgruppen får ett namn med hjälp av <legend>.
+      -->
+      <fieldset>
+        <legend>Frakt</legend>
+
+        <!--
+          Radioknappars etiketter placerar man ofta efter knappen, men samma regler gäller för `for` och `id`.
+          För att radioknapparna ska länkas samman så att man inte kan välja mer än ett av alternativen måste vi ge dem identiska namn. `id` måste fortfarande vara unikt.
+        -->
+        <input id="express-shipping" type="radio" name="shipping"> <label for="express-shipping">Expresspaket</label>
+
+        <input id="regular-shipping" type="radio" name="shipping"> <label for="regular-shipping">Postpaket</label>
+      </fieldset>
+
+      <div>
+        <label for="misc">Övrigt:</label><br>
+        <!--
+          En större textruta skapar vi med <textarea>. `rows` styr antalet rader.
+        -->
+        <textarea id="misc" rows="8"></textarea>
+      </div>
+
+      <div>
+        <!--
+          Så här skapar vi en kryssruta som dessutom är tvungen att vara ikryssad (required).
+        -->
+        <input id="accept-terms" type="checkbox" required> <label for="accept-terms">Jag har tagit del av köpvillkoren</label>
+      </div>
+
+      <!--
+        En knapp av typen `submit` skickar formuläret när användaren klickar.
+      -->
+      <button type="submit">Skicka</button>
+      <!--
+        En knapp av typen `reset` tömmer formuläret.
+      -->
+      <button type="reset">Rensa</button>
+
+    </form>
+
+  </body>
+</html>
