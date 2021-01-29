@@ -1,0 +1,34 @@
+html { font-size: 16px;}
+
+body {
+    background-color: lightgray;
+}
+
+ul {
+    list-style-type: none;
+    background-color: lightpink;
+    text-align: center;
+}
+ul>li {
+    border: solid 1px yellow;
+    box-sizing: content-box;
+    float: left;
+    text-align: center;
+    margin: 0;
+    padding: 1rem;
+}
+
+ul>li>a {
+    text-decoration:none;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;
+    font-size: 1.1rem;
+    color: white;
+}
+
+ul>li:hover {
+    background-color: plum;
+}
+
+ul>li:hover>a {
+    color: black;
+}
