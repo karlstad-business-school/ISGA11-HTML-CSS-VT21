@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto|ZCOOL+KuaiLe');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", Helvetica, Arial, sans-serif;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  font-family: 'ZCOOL KuaiLe', cursive;
+  font-size: 300%;
+  text-shadow: 4px 4px 4px #aaa;
+}
+
+form {
+  width: 100%;
+  max-width: 400px;
+  border: 1px solid silver;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  box-shadow: 10px 10px 20px rgba(0,0,0,.125);
+}
+
+.field {
+  margin-bottom: 1rem;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+select,
+textarea {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+
+  border: 1px solid silver;
+  border-radius: 0.25rem;
+  background: none;
+  box-shadow: none;
+
+  font-size: 1rem;
+
+  padding: .5rem;
+  margin-top: .25rem;
+  height: 2.5rem;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="number"]:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: dodgerblue;
+  box-shadow: 0 0 0 3px rgba(30, 144, 255, .5);
+}
+
+fieldset {
+  border: 1px solid silver;
+  border-radius: 0.25rem;
+  margin: 0;
+  padding: 1rem;
+}
+
+textarea {
+  height: auto;
+  resize: vertical;
+}
+
+.radio {
+  display: inline-block;
+}
+
+.radio + .radio {
+  margin-left: 1rem;
+}
+
+button {
+  -webkit-appearance: none;
+
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  height: auto;
+  border: none;
+  background-color: transparent;
+  color: inherit;
+
+  background-color: dodgerblue;
+  color: white;
+  font-weight: bold;
+  padding: .5rem .75rem;
+  border-radius: 9999px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #006edb;
+}
+
+button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(30, 144, 255, .5);
+}
+
+button[type="submit"] {
+  float: right;
+  background-color: limegreen;
+}
+
+button[type="submit"]:hover {
+  background-color: #28a428;
+}
+
+button[type="submit"]:focus {
+  box-shadow: 0 0 0 3px rgba(50, 205, 50, .5);
+}
